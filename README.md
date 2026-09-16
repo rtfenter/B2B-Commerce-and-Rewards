@@ -1,6 +1,8 @@
-# Loyalty & Rewards
+# Rewards & Incentives
 
-Product studies and interactive explorations across B2C loyalty and B2B partner rewards.
+**B2C loyalty · B2B partner rewards · activation · engagement · incentive systems**
+
+Product studies and interactive explorations of how rewards and incentives shape behavior across consumer and partner products.
 
 My professional experience spans both sides of this space: consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
 
@@ -118,7 +120,7 @@ Members and partners shouldn't have to think about lifecycle states, delayed eve
 
 # About This Work
 
-This repository is the public hub for my loyalty and rewards work across B2C and B2B products.
+This repository is the public hub for my rewards and incentives work across B2C and B2B products.
 
 FORM, its members, transactions, campaigns, program rules, and results are fictional. Simulated metrics are illustrative and do not represent any current or former employer.
 
