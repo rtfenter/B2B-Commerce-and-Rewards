@@ -4,7 +4,7 @@
 
 Product studies and interactive explorations of how rewards and incentives shape behavior across consumer and partner products.
 
-My professional experience spans both sides of this space: consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
+My professional experience spans both sides of this space: scaling consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
 
 Loyalty is often framed as a marketing feature. Underneath the member or partner experience, it is also a product problem involving eligibility, lifecycle, earning and redemption, promotions, experimentation, and program operations.
 
