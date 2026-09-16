@@ -1,6 +1,6 @@
 # Rewards & Incentives
 
-**B2C loyalty · B2B partner rewards · activation · engagement · incentive systems**
+**B2C Loyalty · B2B Partner Rewards · Activation & Engagement · Incentive Design**
 
 Product studies and interactive explorations of how rewards and incentives shape behavior across consumer and partner products.
 
