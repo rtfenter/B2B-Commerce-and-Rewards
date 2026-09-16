@@ -41,7 +41,7 @@ How FORM defines activation, eligibility, campaigns, experiments, lifecycle stat
 - Ecommerce and POS
 - Delayed activity and duplicate protection
 
-## From member experience to product logic
+## From Member Experience to Product Logic
 
 ![FORM member experience concept](assets/form-member-concept.png)
 
@@ -51,7 +51,7 @@ The member experience brings the loyalty lifecycle into a consumer-facing produc
 
 Campaign Studio explores audience rules, eligibility, offer design, experiment allocation, and the distinction between what a product team can configure and what customer behavior has to be observed.
 
-### A few product questions inside FORM
+### A Few Product Questions Inside FORM
 
 **When is a member actually activated?**  
 Enrollment tells us someone joined a program. It does not tell us whether the program has begun creating meaningful participation. FORM defines activation for this study as completing a first qualifying purchase after enrollment. The definition is explicit because activation is a product decision tied to the behavior a program is designed to create, not a universal loyalty metric.
@@ -96,23 +96,23 @@ The goal is not to recreate consumer loyalty with companies substituted for peop
 
 A few ideas connect the work across both B2C loyalty and B2B rewards.
 
-### Rules shape the experience
+### Rules Shape the Experience
 
 Eligibility, earning, redemption, lifecycle, promotion, and exception rules determine what someone can actually do and what happens when circumstances change.
 
-### Value has to remain explainable
+### Value Has to Remain Explainable
 
 A member or partner should be able to understand what they earned, what they used, and what happened when something changed. That requires the underlying transactions and rules to tell a consistent story.
 
-### Enrollment is not activation
+### Enrollment is not Activation
 
 Entering a program is different from participating meaningfully in it. Activation has to be defined around the behavior and value the product is actually trying to create.
 
-### Reconciliation matters
+### Reconciliation Matters
 
 Balances, transactions, program rules, and member- or partner-visible history need to agree. When they do not, what looks like a small experience problem can become an operational one.
 
-### The simple experience still needs reliable systems
+### The Simple Experience Still Needs Reliable Systems
 
 Members and partners shouldn't have to think about lifecycle states, delayed events, reconciliation, or operational controls. Product teams do. My loyalty work includes those platform concerns where they affect the experience, with deeper technical explorations in **[Systems of Trust](https://github.com/rtfenter/Systems-of-Trust-Series)**.
 
