@@ -51,7 +51,6 @@ The member experience brings the loyalty lifecycle into a consumer-facing produc
 
 Campaign Studio explores audience rules, eligibility, offer design, experiment allocation, and the distinction between what a product team can configure and what customer behavior has to be observed.
 
----
 ### A Few Product Questions Inside FORM
 
 **When is a member actually activated?**  
