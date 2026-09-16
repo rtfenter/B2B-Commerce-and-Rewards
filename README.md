@@ -20,8 +20,6 @@ FORM is a fictional women's activewear brand I created to explore B2C loyalty th
 
 **[Launch the interactive B2C Loyalty study →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
 
-![FORM member experience concept](assets/form-member-concept.png)
-
 The study moves between two perspectives:
 
 **Member View**  
@@ -45,7 +43,9 @@ How FORM defines activation, eligibility, campaigns, experiments, lifecycle stat
 
 ## From member experience to product logic
 
-The member experience is only one side of a loyalty product. I wanted the study to make the decisions underneath that experience visible without turning them into abstract architecture diagrams.
+![FORM member experience concept](assets/form-member-concept.png)
+
+The member experience brings the loyalty lifecycle into a consumer-facing product, from joining and earning to targeted offers, redemption, and activity across channels.
 
 ![FORM Campaign Studio concept](assets/form-product-view-concept.png)
 
@@ -125,9 +125,3 @@ This repository is the public hub for my rewards and incentives work across B2C 
 FORM, its members, transactions, campaigns, program rules, and results are fictional. Simulated metrics are illustrative and do not represent any current or former employer.
 
 The interactive studies are designed to make product decisions, rules, and tradeoffs visible without exposing proprietary systems or data.
-
----
-
-**Writing:** [Medium](https://medium.com/@rtfenter)  
-**Connect:** [LinkedIn](https://www.linkedin.com/in/rtfenter/)  
-**More work:** [GitHub](https://github.com/rtfenter)
