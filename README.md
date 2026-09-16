@@ -16,7 +16,7 @@ Loyalty is often framed as a marketing feature. Underneath the member or partner
 
 ## FORM
 
-FORM is a fictional women's activewear brand I created to explore B2C loyalty through both the member experience and the product decisions behind it.
+FORM is a fictional women's activewear brand I created to showcase B2C loyalty through both the member experience and the product decisions behind it.
 
 **[Launch the interactive B2C Loyalty study →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
 
