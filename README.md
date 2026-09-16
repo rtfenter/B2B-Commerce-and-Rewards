@@ -1,6 +1,6 @@
 # Loyalty & Rewards
 
-Product studies, writing, and interactive explorations across B2C loyalty and B2B partner rewards.
+Product studies and interactive explorations across B2C loyalty and B2B partner rewards.
 
 My professional experience spans both sides of this space: consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
 
@@ -113,18 +113,6 @@ Balances, transactions, program rules, and member- or partner-visible history ne
 ### The simple experience still needs reliable systems
 
 Members and partners shouldn't have to think about lifecycle states, delayed events, reconciliation, or operational controls. Product teams do. My loyalty work includes those platform concerns where they affect the experience, with deeper technical explorations in **[Systems of Trust](https://github.com/rtfenter/Systems-of-Trust-Series)**.
-
----
-
-# Writing
-
-Essays exploring loyalty, platforms, personalization, and data integrity.
-
-- **[Why Loyalty Systems Are Some of the Hardest Products to Build (and the Most Underrated)](https://medium.com/@rtfenter/why-loyalty-systems-are-some-of-the-hardest-products-to-build-and-the-most-underrated-d9f638097840)**
-- **[The Platform Problem: Thinking in Boundaries When Shipping Features](https://medium.com/@rtfenter/the-platform-problem-thinking-in-boundaries-when-shipping-features-311c734ed55b)**
-- **[The ML Problem: Turning Data Into Decisions](https://medium.com/@rtfenter/the-ml-problem-turning-data-into-decisions-a28534a22988)**
-- **[Designing for Data Integrity at Global Scale](https://medium.com/@rtfenter/designing-for-data-integrity-at-global-scale-3c7fb8af5c6f)**
-- **[When Personalization Learns Too Fast](https://medium.com/@rtfenter/when-personalization-learns-too-fast-901b0883adb0)**
 
 ---
 
