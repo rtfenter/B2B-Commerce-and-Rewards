@@ -1,70 +1,124 @@
-# Loyalty Systems Series  
-Applied loyalty architecture, simulations, and system design
+# Loyalty & Rewards
 
-This series collects my work on loyalty systems — where economics, governance, FX, partner rules, and user journeys intersect.  
-It includes writing, diagrams, and small technical projects that reveal how loyalty infrastructure actually behaves beneath the UI layer.
+Product studies, writing, and interactive explorations across B2C loyalty and B2B partner rewards.
 
-My goal is to make loyalty design legible — not as marketing, but as a distributed systems problem involving events, FX, tiering, reconciliation, and truth stability at scale.
+My professional experience spans both sides of this space: consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
 
----
-
-## Purpose of This Series
-
-Loyalty systems are often framed as marketing features.  
-In reality, they are:
-
-- distributed economic engines  
-- deeply dependent on clean events  
-- tied to FX timing and regional rules  
-- sensitive to drift between services  
-- tightly coupled to financial liability  
-- reflections of a company’s truth architecture  
-
-Loyalty succeeds only when earning, FX, tiering, partner rules, and reconciliation stay aligned across markets and systems.
-
-This series makes that architecture visible through essays, diagrams, and high-signal prototypes.
+Loyalty is often framed as a marketing feature. Underneath the member or partner experience, it is also a product problem involving eligibility, lifecycle, earning and redemption, promotions, experimentation, and program operations.
 
 ---
 
-## Why This Matters for Product Strategy
+# B2C Loyalty
 
-Loyalty is one of the hardest system types to get right — and one of the easiest to get subtly wrong.
+**Activation · Engagement · Targeted Promotions · Experimentation · Earning · Redemption · Omnichannel**
 
-Clearer logic and stronger architecture lead directly to:
+## FORM
 
-- consistent earning and redemption experiences across markets  
-- safer financial liability management  
-- fewer partner escalations  
-- stronger personalization and ML signals  
-- lower operational overhead from drift and reconciliation issues  
-- faster expansion into partners, campaigns, and new markets  
+FORM is a fictional women's activewear brand I created to explore B2C loyalty through both the member experience and the product decisions behind it.
 
-These prototypes are not engineering tools — they are product clarity tools that help teams align on value, rules, and economics early in the lifecycle.
+**[Launch the interactive B2C Loyalty study →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
+
+![FORM member experience concept](assets/form-member-concept.png)
+
+The study moves between two perspectives:
+
+**Member View**  
+What Maya experiences as she joins FORM Rewards, earns points, receives and uses a targeted offer, redeems value, and interacts across channels.
+
+**Product View**  
+How FORM defines activation, eligibility, campaigns, experiments, lifecycle states, return policies, and omnichannel consistency.
+
+### What it explores
+
+- Enrollment vs. activation
+- Base and promotional earning
+- Targeted promotions and eligibility
+- Audience segmentation
+- A/B testing and control groups
+- Engagement and lifecycle states
+- Redemption and reward value
+- Returns and reconciliation
+- Ecommerce and POS
+- Delayed activity and duplicate protection
+
+## From member experience to product logic
+
+The member experience is only one side of a loyalty product. I wanted the study to make the decisions underneath that experience visible without turning them into abstract architecture diagrams.
+
+![FORM Campaign Studio concept](assets/form-product-view-concept.png)
+
+Campaign Studio explores audience rules, eligibility, offer design, experiment allocation, and the distinction between what a product team can configure and what customer behavior has to be observed.
+
+### A few product questions inside FORM
+
+**When is a member actually activated?**  
+Enrollment tells us someone joined a program. It does not tell us whether the program has begun creating meaningful participation. FORM defines activation for this study as completing a first qualifying purchase after enrollment. The definition is explicit because activation is a product decision tied to the behavior a program is designed to create, not a universal loyalty metric.
+
+**Who should receive an incentive?**  
+Campaign Studio separates audience rules, eligibility, offer design, and experiment allocation from behavioral outcomes. A product team can control who qualifies and what experience they receive. It cannot know how customers will respond until that behavior is observed.
+
+**What happens when loyalty value is returned?**  
+A return is not always as simple as subtracting points from a balance. FORM preserves the relationship between earning, redemption, reward value, payment tender, and the transaction being reversed so the resulting balance and member history can be explained.
+
+**What does omnichannel loyalty mean to the member?**  
+Maya expects one FORM Rewards account. The product has to make ecommerce and POS activity resolve into that experience even when transactions arrive at different times. The study explores delayed activity, identity, reconciliation, and duplicate protection without assuming every channel operates in real time.
+
+**[Explore FORM →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
 
 ---
 
-## Product Architecture Philosophy
+# B2B Partner Rewards
 
-Loyalty systems operate at the intersection of economics, truth, and experience.
+**Eligibility · Activation · Tiering · Incentives · Partner Lifecycle · Program Operations**
 
-My architecture philosophy is built on three principles:
+B2B partner rewards share some mechanics with consumer loyalty, but the participant is a business account and the product problems change with it.
 
-### 1. Value must be consistent everywhere  
-Points, tiers, FX, and partner rules must converge on a coherent definition of value.
+My next interactive study will explore:
 
-### 2. Rules define the real product  
-Earn logic, overrides, tier multipliers, and region-based conditions *are* the product surface.
+- partner eligibility and opt-in
+- activation
+- tier qualification and progression
+- qualifying business activity
+- incentives and rewards
+- partner lifecycle states
+- program operations
+- admin controls and permissions
+- exceptions and suspension
+- auditability
 
-### 3. Reconciliation is the source of truth  
-A loyalty platform only works when ledger, analytics, and user-visible balances all agree under pressure.
-
-This series expresses that philosophy through interactive tools and clear system models.
+The goal is not to recreate consumer loyalty with companies substituted for people. It is to explore where the same underlying concepts behave differently in a B2B partner ecosystem.
 
 ---
 
-## Writing
+# Product Principles
 
-Essays exploring loyalty architecture, platform design, ML alignment, and data integrity.
+A few ideas connect the work across both B2C loyalty and B2B rewards.
+
+### Rules shape the experience
+
+Eligibility, earning, redemption, lifecycle, promotion, and exception rules determine what someone can actually do and what happens when circumstances change.
+
+### Value has to remain explainable
+
+A member or partner should be able to understand what they earned, what they used, and what happened when something changed. That requires the underlying transactions and rules to tell a consistent story.
+
+### Enrollment is not activation
+
+Entering a program is different from participating meaningfully in it. Activation has to be defined around the behavior and value the product is actually trying to create.
+
+### Reconciliation matters
+
+Balances, transactions, program rules, and member- or partner-visible history need to agree. When they do not, what looks like a small experience problem can become an operational one.
+
+### The simple experience still needs reliable systems
+
+Members and partners shouldn't have to think about lifecycle states, delayed events, reconciliation, or operational controls. Product teams do. My loyalty work includes those platform concerns where they affect the experience, with deeper technical explorations in **[Systems of Trust](https://github.com/rtfenter/Systems-of-Trust-Series)**.
+
+---
+
+# Writing
+
+Essays exploring loyalty, platforms, personalization, and data integrity.
 
 - **[Why Loyalty Systems Are Some of the Hardest Products to Build (and the Most Underrated)](https://medium.com/@rtfenter/why-loyalty-systems-are-some-of-the-hardest-products-to-build-and-the-most-underrated-d9f638097840)**
 - **[The Platform Problem: Thinking in Boundaries When Shipping Features](https://medium.com/@rtfenter/the-platform-problem-thinking-in-boundaries-when-shipping-features-311c734ed55b)**
@@ -72,152 +126,18 @@ Essays exploring loyalty architecture, platform design, ML alignment, and data i
 - **[Designing for Data Integrity at Global Scale](https://medium.com/@rtfenter/designing-for-data-integrity-at-global-scale-3c7fb8af5c6f)**
 - **[When Personalization Learns Too Fast](https://medium.com/@rtfenter/when-personalization-learns-too-fast-901b0883adb0)**
 
+---
+
+# About This Work
+
+This repository is the public hub for my loyalty and rewards work across B2C and B2B products.
+
+FORM, its members, transactions, campaigns, program rules, and results are fictional. Simulated metrics are illustrative and do not represent any current or former employer.
+
+The interactive studies are designed to make product decisions, rules, and tradeoffs visible without exposing proprietary systems or data.
 
 ---
 
-## Projects  
-### Series Index
-
-| Prototype | Purpose | Live Demo | Repo |
-|----------|---------|-----------|------|
-| Loyalty Points Simulator | Simulate earning, FX normalization, partner rules, and tier multipliers | https://rtfenter.github.io/Loyalty-Points-Simulator/ | https://github.com/rtfenter/Loyalty-Points-Simulator |
-| Loyalty Drift Dashboard | Surface drift in targeting, promotions, and classification | https://rtfenter.github.io/Loyalty-Drift-Dashboard/ | https://github.com/rtfenter/Loyalty-Drift-Dashboard |
-| Loyalty Event Contract Validator | Validate loyalty event rules, naming, types, and schema drift | https://rtfenter.github.io/Loyalty-Event-Contract-Validator/ | https://github.com/rtfenter/Loyalty-Event-Contract-Validator |
-| Tier Progression Visualizer | Earn → FX → tier → partner multipliers | https://rtfenter.github.io/Loyalty-Tier-Progression-Visualizer/ | https://github.com/rtfenter/Loyalty-Tier-Progression-Visualizer |
-| Partner Rule Tester — Loyalty Edition | Region eligibility, overrides, partner exceptions | https://rtfenter.github.io/Loyalty-Partner-Rule-Tester/ | https://github.com/rtfenter/Loyalty-Partner-Rule-Tester |
-| Redemption Value Integrity Checker | Value parity across markets and partners | https://rtfenter.github.io/Loyalty-Redemption-Value-Checker/ | https://github.com/rtfenter/Loyalty-Redemption-Value-Checker |
-| FX Drift Analyzer for Loyalty Value | FX shifts → value distortion → fairness issues | https://rtfenter.github.io/Loyalty-FX-Drift-Analyzer/ | https://github.com/rtfenter/Loyalty-FX-Drift-Analyzer |
-| Loyalty Ledger Reconciliation Sandbox | Earned vs redeemed vs expired vs corrected | https://rtfenter.github.io/Loyalty-Ledger-Reconciliation-Sandbox/ | https://github.com/rtfenter/Loyalty-Ledger-Reconciliation-Sandbox |
-
----
-
-## System Diagrams
-
-### Earn → Ledger → Redeem Event Flow
-
-```
-    [User Purchase]
-          |
-          v
-    [Earn Event Created]
-          |
-          v
-    [Event Ingest Layer]
-          |
-          v
-    [Points Engine]
-      - apply FX (normalize)
-      - apply earn rules (rate, tier, partner)
-          |
-          v
-    [Points Ledger]
-      - record points_earned
-      - update balance
-          |
-          v
-    [Redemption Triggered]
-          |
-          v
-    [Redeem Event Created]
-          |
-          v
-    [Redemption Engine]
-      - validate balance
-      - apply reward rules
-          |
-          v
-    [Liability & Reporting]
-```
-
----
-
-### Points Truth Drift Map
-
-```
-                [Source of Truth: Points Ledger]
-                           |
-           -----------------------------------------
-           |                   |                  |
-           v                   v                  v
-   [Service A]           [Service B]        [Service C]
-
-Examples:
-- Service A: value = $0.01
-- Service B: outdated config
-- Service C: missing partner rules
-
-Result:
-- inconsistent balances
-- mismatched liability
-- ML trained on contradictory truth
-```
-
----
-
-### FX Conversion and Tiered Value Reconciliation
-
-```
-[Purchase: amount + currency + partner + tier]
-                    |
-                    v
-           [FX Normalization Layer]
-                    |
-                    v
-         [Tier & Rule Evaluation Engine]
-                    |
-                    v
-             [Points Calculation]
-                    |
-                    v
-            [Ledger & Liability View]
-```
-
----
-
-### Partner-Specific Rules & Multi-Market Drift
-
-```
-               [Global Program Config]
-                         |
-        -----------------------------------------------
-        |                     |                       |
-        v                     v                       v
-   [Partner A]           [Partner B]              [Partner C]
-
-Potential Drift:
-- inconsistent earn logic
-- FX timing mismatch
-- stale overrides
-- partial rollouts
-
-Outcome:
-- multiple “truths”
-- reconciliation pain
-- unfair value distribution
-```
-
----
-
-## Portfolio & Writing
-
-- Medium: https://medium.com/@rtfenter  
-- LinkedIn: https://www.linkedin.com/in/rtfenter/  
-- GitHub: https://github.com/rtfenter  
-
----
-
-## About This Repo
-
-This repository is the central hub for all loyalty-related work — writing, diagrams, prototypes, and system models.
-
----
-
-## Technologies Used
-
-These prototypes are intentionally lightweight:
-
-- HTML / CSS / JavaScript  
-- GitHub Pages hosting  
-- No backend required  
-
-The goal is clarity: high-signal tools that communicate loyalty logic without infrastructure overhead.
+**Writing:** [Medium](https://medium.com/@rtfenter)  
+**Connect:** [LinkedIn](https://www.linkedin.com/in/rtfenter/)  
+**More work:** [GitHub](https://github.com/rtfenter)
