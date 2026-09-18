@@ -18,14 +18,12 @@ In invoiced B2B commerce, an order can be completed with **$0 collected at check
 
 **The decision:** Separate recognition of qualifying activity from availability of usable reward value.
 
-```text
-Order → Invoice → Pending Validation → Available
-```
+**Order → Invoice → Pending Validation → Available**
 
 This creates a deliberate boundary between two needs:
 
-| Partner                                     | Business                                                      |
-| ------------------------------------------- | ------------------------------------------------------------- |
+| Partner | Business |
+| --- | --- |
 | See that qualifying activity was recognized | Validate the underlying activity before creating usable value |
 
 The pending state adds complexity, but avoids choosing between an opaque partner experience and premature reward issuance.
@@ -42,11 +40,8 @@ Rewards sit on top of a transaction lifecycle that doesn't necessarily end at ch
 
 A customer can earn value, use it, and later reverse some or all of the transaction that created it.
 
-```text
-CUSTOMER   Purchase → Earn → Redeem → Return
-                ↓        ↓       ↓        ↓
-SYSTEM     Transaction → Ledger → Adjustment → Reconciliation
-```
+**Customer:** Purchase → Earn → Redeem → Return  
+**System:** Transaction → Ledger → Adjustment → Reconciliation
 
 The product problem isn't simply **"remove the points."**
 
@@ -64,17 +59,15 @@ Rules have to define what happens across partial returns, promotional earning, p
 
 An enrolled member isn't necessarily an active member, and an active member isn't necessarily engaged.
 
-```text
-Enrolled → Activated → Engaged → Retained
-```
+**Enrolled → Activated → Engaged → Retained**
 
 Targeted incentives should start with the **behavior the product is trying to change**, not the offer itself.
 
-| Audience            | Objective             | Success event                          |
-| ------------------- | --------------------- | -------------------------------------- |
-| New member          | Create initial value  | First qualifying action                |
-| Newly active member | Build repeat behavior | Second qualifying action               |
-| Lapsed member       | Restore engagement    | New qualifying action after inactivity |
+| Audience | Objective | Success event |
+| --- | --- | --- |
+| New member | Create initial value | First qualifying action |
+| Newly active member | Build repeat behavior | Second qualifying action |
+| Lapsed member | Restore engagement | New qualifying action after inactivity |
 
 From there, the product can define the appropriate incentive, eligibility rules, measurement window, and audience exclusions.
 
