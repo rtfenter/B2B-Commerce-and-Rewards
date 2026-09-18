@@ -70,7 +70,7 @@ The additional state creates some product complexity, but avoids choosing betwee
 
 ## Commercial Lifecycle ↔ Reward Lifecycle
 
-*[Lifecycle visual: commercial events across the top, corresponding reward states underneath.]*
+![Commercial lifecycle and corresponding reward states](assets/commercial-reward-lifecycle.png)
 
 The two lifecycles are related, but they are not the same.
 
