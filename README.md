@@ -1,80 +1,88 @@
-# Rewards & Incentives
-
-**B2C Loyalty · B2B Partner Rewards · Activation & Engagement · Incentive Design**
-
-Product studies exploring how rewards and incentives shape behavior across consumer and partner products.
-
-My professional experience spans both sides of this space: scaling consumer loyalty across ecommerce and POS, and building a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, when value is actually earned, and how the systems underneath keep that value accurate.
-
-Loyalty is often framed as a marketing feature. Underneath the member or partner experience, it's also a product problem involving transactions, economics, lifecycle, and behavior.
-
----
-
-## 01 / B2B Rewards
+# B2B Commerce & Rewards
 
 ### Order ≠ Earned
 
-In invoiced B2B commerce, an order can be completed with **$0 collected at checkout**. That means `order placed` and `reward earned` cannot safely represent the same event.
+In invoiced B2B commerce, placing an order doesn't necessarily mean money has changed hands. An order can be completed with **$0 collected at checkout**, while invoicing and financial validation happen later.
 
-**The decision:** Separate recognition of qualifying activity from availability of usable reward value.
+That creates a product question:
+
+> **When should a partner see, earn, and be able to use their reward?**
+
+---
+
+## The Product Problem
+
+If usable reward value is created when the order is placed, the reward can exist before the underlying financial activity has been validated.
+
+If nothing appears until validation is complete, the partner has no acknowledgement that their qualifying activity was recognized.
+
+The product has to separate **recognition of activity** from **availability of value**.
 
 **Order → Invoice → Pending Validation → Available**
-
-This creates a deliberate boundary between two needs:
 
 | Partner | Business |
 | --- | --- |
 | See that qualifying activity was recognized | Validate the underlying activity before creating usable value |
-
-The pending state adds complexity, but avoids choosing between an opaque partner experience and premature reward issuance.
-
-**What I'd measure:** straight-through validation rate, validation accuracy, time to availability, and exception rate.
+| Understand the current reward state | Avoid issuing value against activity that changes or becomes invalid |
+| Know when value becomes usable | Keep reward value aligned with the transaction lifecycle |
 
 ---
 
-## 02 / B2C Transactions
+## The Product Decision
 
-### Purchase ≠ Final Transaction
+**Separate reward recognition from reward availability.**
 
-Rewards sit on top of a transaction lifecycle that doesn't necessarily end at checkout.
+Qualifying activity creates reward value in **Pending Validation**.
 
-A customer can earn value, use it, and later reverse some or all of the transaction that created it.
+Once the underlying activity is validated, that value becomes **Available**.
 
-**Customer:** Purchase → Earn → Redeem → Return  
-**System:** Transaction → Ledger → Adjustment → Reconciliation
-
-The product problem isn't simply **"remove the points."**
-
-Rules have to define what happens across partial returns, promotional earning, previously redeemed value, adjustments, and negative balances while keeping the customer experience understandable.
-
-**The decision principle:** Customer-facing reward state and underlying financial state should remain explainable and reconcilable throughout the transaction lifecycle.
-
-**What I'd measure:** reconciliation accuracy, adjustment exceptions, incorrect reward balances, and reward-related customer contacts.
+The pending state introduces additional lifecycle complexity, but avoids choosing between an opaque partner experience and premature reward issuance.
 
 ---
 
-## 03 / Engagement
+## Designing for Change
 
-### Enrollment ≠ Activation
+The original order isn't necessarily the final source of truth. The lifecycle also needs deterministic behavior when the underlying activity changes.
 
-An enrolled member isn't necessarily an active member, and an active member isn't necessarily engaged.
+| Transaction outcome | Reward behavior |
+| --- | --- |
+| Activity validates | Pending Validation → Available |
+| Qualifying value changes | Pending value recalculates before becoming available |
+| Activity becomes ineligible | Pending Validation → Ineligible |
 
-**Enrolled → Activated → Engaged → Retained**
-
-Targeted incentives should start with the **behavior the product is trying to change**, not the offer itself.
-
-| Audience | Objective | Success event |
-| --- | --- | --- |
-| New member | Create initial value | First qualifying action |
-| Newly active member | Build repeat behavior | Second qualifying action |
-| Lapsed member | Restore engagement | New qualifying action after inactivity |
-
-From there, the product can define the appropriate incentive, eligibility rules, measurement window, and audience exclusions.
-
-The important distinction is between **offer performance** and **behavior change**. Claims and clicks can describe interaction with an offer; they don't establish that the incentive created incremental engagement.
-
-**What I'd measure:** incremental qualifying behavior and progression through the engagement lifecycle, with incentive cost, cannibalization, margin impact, and opt-outs as guardrails.
+The rule stays consistent: **usable reward value represents validated qualifying activity, not simply an order event.**
 
 ---
 
-*The studies above draw from product patterns I've encountered professionally. Companies, transactions, and implementation details are fictionalized and illustrative.*
+## Measurement
+
+### Primary
+
+**Straight-through validation rate**
+
+The percentage of qualifying rewards that progress accurately from Pending Validation to Available without manual intervention.
+
+### Supporting measures
+
+- Validation accuracy
+- Time to availability
+- Exception rate
+- Reward-related support contacts
+
+### Guardrails
+
+- Incorrect reward value issued
+- Usable value created against invalid activity
+- Reconciliation exceptions
+
+---
+
+## The Broader Product Problem
+
+A reward may look simple to the partner while depending on commerce, invoicing, financial validation, lifecycle state, and operational rules underneath it.
+
+The product decision isn't simply **when to give someone a reward**. It's defining when that value becomes real, what the partner experiences before then, and how the system behaves when the transaction changes.
+
+---
+
+*This is a fictionalized product study based on product patterns I've encountered professionally. Companies, transactions, and implementation details are illustrative.*
