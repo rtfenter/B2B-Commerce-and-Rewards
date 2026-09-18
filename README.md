@@ -2,126 +2,86 @@
 
 **B2C Loyalty · B2B Partner Rewards · Activation & Engagement · Incentive Design**
 
-Product studies and interactive explorations of how rewards and incentives shape behavior across consumer and partner products.
+Product studies exploring how rewards and incentives shape behavior across consumer and partner products.
 
-My professional experience spans both sides of this space: scaling consumer loyalty across ecommerce and POS, and a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, how value is earned and redeemed, and how rules and systems keep the experience consistent.
+My professional experience spans both sides of this space: scaling consumer loyalty across ecommerce and POS, and building a 0→1 B2B partner rewards platform. I'm interested in the product decisions underneath these experiences: how people activate and engage, how incentives shape behavior, when value is actually earned, and how the systems underneath keep that value accurate.
 
-Loyalty is often framed as a marketing feature. Underneath the member or partner experience, it is also a product problem involving eligibility, lifecycle, earning and redemption, promotions, experimentation, and program operations.
-
----
-
-# B2C Loyalty
-
-**Activation · Engagement · Targeted Promotions · Experimentation · Earning · Redemption · Omnichannel**
-
-## FORM
-
-FORM is a fictional women's activewear brand I created to showcase B2C loyalty through both the member experience and the product decisions behind it.
-
-**[Launch the interactive B2C Loyalty study →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
-
-The study moves between two perspectives:
-
-**Member View**  
-What Maya experiences as she joins FORM Rewards, earns points, receives and uses a targeted offer, redeems value, and interacts across channels.
-
-**Product View**  
-How FORM defines activation, eligibility, campaigns, experiments, lifecycle states, return policies, and omnichannel consistency.
-
-### What it explores
-
-- Enrollment vs. activation
-- Base and promotional earning
-- Targeted promotions and eligibility
-- Audience segmentation
-- A/B testing and control groups
-- Engagement and lifecycle states
-- Redemption and reward value
-- Returns and reconciliation
-- Ecommerce and POS
-- Delayed activity and duplicate protection
-
-## From Member Experience to Product Logic
-
-![FORM member experience concept](assets/form-member-concept.png)
-
-The member experience brings the loyalty lifecycle into a consumer-facing product, from joining and earning to targeted offers, redemption, and activity across channels.
-
-![FORM Campaign Studio concept](assets/form-product-view-concept.png)
-
-Campaign Studio explores audience rules, eligibility, offer design, experiment allocation, and the distinction between what a product team can configure and what customer behavior has to be observed.
-
-### A Few Product Questions Inside FORM
-
-**When is a member actually activated?**  
-Enrollment tells us someone joined a program. It does not tell us whether the program has begun creating meaningful participation. FORM defines activation for this study as completing a first qualifying purchase after enrollment. The definition is explicit because activation is a product decision tied to the behavior a program is designed to create, not a universal loyalty metric.
-
-**Who should receive an incentive?**  
-Campaign Studio separates audience rules, eligibility, offer design, and experiment allocation from behavioral outcomes. A product team can control who qualifies and what experience they receive. It cannot know how customers will respond until that behavior is observed.
-
-**What happens when loyalty value is returned?**  
-A return is not always as simple as subtracting points from a balance. FORM preserves the relationship between earning, redemption, reward value, payment tender, and the transaction being reversed so the resulting balance and member history can be explained.
-
-**What does omnichannel loyalty mean to the member?**  
-Maya expects one FORM Rewards account. The product has to make ecommerce and POS activity resolve into that experience even when transactions arrive at different times. The study explores delayed activity, identity, reconciliation, and duplicate protection without assuming every channel operates in real time.
-
-**[Explore FORM →](https://rtfenter.github.io/B2C-Loyalty-Product-Study/)**
+Loyalty is often framed as a marketing feature. Underneath the member or partner experience, it's also a product problem involving transactions, economics, lifecycle, and behavior.
 
 ---
 
-# B2B Partner Rewards
+## 01 / B2B Rewards
 
-**Eligibility · Activation · Tiering · Incentives · Partner Lifecycle · Program Operations**
+### Order ≠ Earned
 
-B2B partner rewards share some mechanics with consumer loyalty, but the participant is a business account and the product problems change with it.
+In invoiced B2B commerce, an order can be completed with **$0 collected at checkout**. That means `order placed` and `reward earned` cannot safely represent the same event.
 
-My next interactive study will explore:
+**The decision:** Separate recognition of qualifying activity from availability of usable reward value.
 
-- partner eligibility and opt-in
-- activation
-- tier qualification and progression
-- qualifying business activity
-- incentives and rewards
-- partner lifecycle states
-- program operations
-- admin controls and permissions
-- exceptions and suspension
-- auditability
+```text
+Order → Invoice → Pending Validation → Available
+```
 
-The goal is not to recreate consumer loyalty with companies substituted for people. It is to explore where the same underlying concepts behave differently in a B2B partner ecosystem.
+This creates a deliberate boundary between two needs:
 
----
+| Partner                                     | Business                                                      |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| See that qualifying activity was recognized | Validate the underlying activity before creating usable value |
 
-# Product Principles
+The pending state adds complexity, but avoids choosing between an opaque partner experience and premature reward issuance.
 
-A few ideas connect the work across both B2C loyalty and B2B rewards.
-
-### Rules Shape the Experience
-
-Eligibility, earning, redemption, lifecycle, promotion, and exception rules determine what someone can actually do and what happens when circumstances change.
-
-### Value Has to Remain Explainable
-
-A member or partner should be able to understand what they earned, what they used, and what happened when something changed. That requires the underlying transactions and rules to tell a consistent story.
-
-### Enrollment is not Activation
-
-Entering a program is different from participating meaningfully in it. Activation has to be defined around the behavior and value the product is actually trying to create.
-
-### Reconciliation Matters
-
-Balances, transactions, program rules, and member- or partner-visible history need to agree. When they do not, what looks like a small experience problem can become an operational one.
-
-### The Simple Experience Still Needs Reliable Systems
-
-Members and partners shouldn't have to think about lifecycle states, delayed events, reconciliation, or operational controls. Product teams do. My loyalty work includes those platform concerns where they affect the experience, with deeper technical explorations in **[Systems of Trust](https://github.com/rtfenter/Systems-of-Trust-Series)**.
+**What I'd measure:** straight-through validation rate, validation accuracy, time to availability, and exception rate.
 
 ---
 
-# About This Work
+## 02 / B2C Transactions
 
-This repository is the public hub for my rewards and incentives work across B2C and B2B products.
+### Purchase ≠ Final Transaction
 
-FORM, its members, transactions, campaigns, program rules, and results are fictional. Simulated metrics are illustrative and do not represent any current or former employer.
+Rewards sit on top of a transaction lifecycle that doesn't necessarily end at checkout.
 
-The interactive studies are designed to make product decisions, rules, and tradeoffs visible without exposing proprietary systems or data.
+A customer can earn value, use it, and later reverse some or all of the transaction that created it.
+
+```text
+CUSTOMER   Purchase → Earn → Redeem → Return
+                ↓        ↓       ↓        ↓
+SYSTEM     Transaction → Ledger → Adjustment → Reconciliation
+```
+
+The product problem isn't simply **"remove the points."**
+
+Rules have to define what happens across partial returns, promotional earning, previously redeemed value, adjustments, and negative balances while keeping the customer experience understandable.
+
+**The decision principle:** Customer-facing reward state and underlying financial state should remain explainable and reconcilable throughout the transaction lifecycle.
+
+**What I'd measure:** reconciliation accuracy, adjustment exceptions, incorrect reward balances, and reward-related customer contacts.
+
+---
+
+## 03 / Engagement
+
+### Enrollment ≠ Activation
+
+An enrolled member isn't necessarily an active member, and an active member isn't necessarily engaged.
+
+```text
+Enrolled → Activated → Engaged → Retained
+```
+
+Targeted incentives should start with the **behavior the product is trying to change**, not the offer itself.
+
+| Audience            | Objective             | Success event                          |
+| ------------------- | --------------------- | -------------------------------------- |
+| New member          | Create initial value  | First qualifying action                |
+| Newly active member | Build repeat behavior | Second qualifying action               |
+| Lapsed member       | Restore engagement    | New qualifying action after inactivity |
+
+From there, the product can define the appropriate incentive, eligibility rules, measurement window, and audience exclusions.
+
+The important distinction is between **offer performance** and **behavior change**. Claims and clicks can describe interaction with an offer; they don't establish that the incentive created incremental engagement.
+
+**What I'd measure:** incremental qualifying behavior and progression through the engagement lifecycle, with incentive cost, cannibalization, margin impact, and opt-outs as guardrails.
+
+---
+
+*The studies above draw from product patterns I've encountered professionally. Companies, transactions, and implementation details are fictionalized and illustrative.*
